@@ -91,13 +91,15 @@
 
     <!-- INPUT: AMOUNT -->
     <div class="input-label">Amount</div>
+    <div>
     <input type="number" id="input-send-amount" placeholder="0.0" min="0.0" step="0.1"></input>
+    </div>
 
     <!-- BUTTON: SEND -->
     <div class="button" onclick="sendEther()">SEND</div>
 
     <!-- BUTTON: SCAN -->
-    <div class="button" onclick="launchScanner()">SCAN QR CODE</div>
+    <!--<div class="button" onclick="launchScanner()">SCAN QR CODE</div>-->
 
     <!-- BUTTON: CANCEL -->
     <div class="button" onclick="clearSendInputs(); setPage('main')">CANCEL</div>

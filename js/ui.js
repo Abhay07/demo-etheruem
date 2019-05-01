@@ -13,15 +13,15 @@ module.exports.refresh = function() {
   if (!localStorage.getItem("address")) return;
 
   // Generate base64 encoded QR image and set it as source for HTML element
-  new QR().toDataUrl({to: address})
-  .then((result) => {
-    document.getElementById("qr").src = result.dataURL
-  })
+  // new QR().toDataUrl({to: address})
+  // .then((result) => {
+  //   document.getElementById("qr").src = result.dataURL
+  // })
 
   // Update address
   document.getElementById("address").innerHTML = address
   document.getElementById("etherscan-address").href = "https://ropsten.etherscan.io/address/" + address
-  document.getElementById("clipboard-address").setAttribute('data-clipboard-text', address)
+  // document.getElementById("clipboard-address").setAttribute('data-clipboard-text', address)
 
   // Update balance (in eth and sek)
   web3.eth.getBalance(address)
